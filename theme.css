@@ -1,0 +1,199 @@
+/*shiyancss*/
+@import url("./style/shiyan.css");
+
+/*插入字体*/
+@font-face {
+    font-family: "siyuansongti";
+    font-style: normal;
+    src: url("./font/siyuansongti.otf");
+}
+
+:root {
+    /* 主色 */
+    /*一些关键图标的颜色。*/
+    --b3-theme-primary: #FAF9FE;
+    /*更多--设置--搜索，这些按钮四尾底色。*/
+    --b3-theme-primary-light: rgba(20, 56, 78, 1);
+    /*字号条、点击按钮，会出现的颜色。*/
+    --b3-theme-primary-lighter: rgba(236, 235, 240, 0);
+    /*文档数标题背景/选中文字背景，鼠标悬浮会显示。*/
+    --b3-theme-primary-lightest: rgba(236, 235, 240, 1);
+    --b3-theme-secondary: #0C0C0C;
+    /*通知栏颜色。*/
+    --b3-theme-background: #FAF9FE;
+    /*侧栏/顶栏/标签页背景颜色，鼠标在标签页和文档树悬浮的颜色。*/
+    --b3-theme-background-light: #F5F5F5;
+    /*搜索框背景|手机端＋块右上图标颜色＋标注等框头部颜色＋会泽百家，至公天下|手机端。*/
+    --b3-theme-surface: #F3F3F3;
+    --b3-theme-surface-light: rgba(12, 12, 12, 0);
+    /*遇到问题的样式，一般为红色。*/
+    --b3-theme-error: #F989B1;
+
+    /* 文字颜色 */
+    /*不知道。*/
+    --b3-theme-on-primary: #fff;
+    /*不知道。*/
+    --b3-theme-on-secondary: #fff;
+    /*编辑器文字颜色。*/
+    --b3-theme-on-background: #101A1B;
+    /*比上面的要浅一点，用于说明文字和默认图标颜色，还有引用中的文字。*/
+    --b3-theme-on-surface: #D7DADB;
+    --b3-theme-on-surface-light: #E9EAEC;
+    /*不知道是啥。*/
+    --b3-theme-on-error: #fff;
+
+    /* 字体 */
+    --b3-font-family: "quote", "siyuansongti", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family-code: "JetBrainsMono-Regular", mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family-graph: mononoki;
+    --b3-font-family-emoji: "Twemoji Mozilla", "Twemoji Mozilla", "Twemoji Mozilla", "Apple Color Emoji", "Twemoji Mozilla", "Noto Color Emoji", "Twemoji Mozilla";
+    --b3-font-family-math: KaTeX_Math;
+
+    /* 线条 */
+    --b3-border-color: rgba(253, 255, 253, 0);
+
+    /* 滚动条 */
+    --b3-scroll-color: rgba(236, 235, 240, 1);
+
+    /* 正文聚焦标题背景。 */
+    --b3-list-hover: #FDF0EB;
+
+    /* 菜单 */
+    --b3-menu-background: #F3F3F3;
+
+    /* 提示 */
+    --b3-tooltips-color: #D7DADB;
+
+    /* 遮罩 */
+    --b3-mask-background: #F3F3F3;
+
+    /* 卡片背景 */
+    /*错误样式*/
+    --b3-card-error-color: rgb(223, 172, 143);
+    --b3-card-error-background: rgb(0, 24, 96);
+    /*警告样式*/
+    --b3-card-warning-color: rgb(145, 91, 32);
+    --b3-card-warning-background: rgb(184, 176, 176);
+    /*信息样式*/
+    --b3-card-info-color: rgb(255, 255, 255);
+    --b3-card-info-background: rgb(234, 32, 18);
+    /*成功样式*/
+    --b3-card-success-color: rgb(151, 0, 1);
+    --b3-card-success-background: rgb(233, 210, 55);
+
+    /* 自定义文字 */
+    --b3-font-color1: #E6F0F0;
+    --b3-font-color2: #62CDFB;
+    --b3-font-color3: #4CD88F;
+    --b3-font-color4: #959FF4;
+    --b3-font-color5: #FBE34D;
+    --b3-font-color6: #FF754D;
+    --b3-font-color7: #F989B1;
+    --b3-font-color8: #FA6277;
+    --b3-font-color9: #D84850;
+    --b3-font-color10: #EA2012;
+    --b3-font-color11: #001860;
+    --b3-font-color12: #0C0C0C;
+    --b3-font-color13: #FDFFFD;
+    --b3-font-background1: #E6F0F0;
+    --b3-font-background2: #62CDFB;
+    --b3-font-background3: #4CD88F;
+    --b3-font-background4: #959FF4;
+    --b3-font-background5: #FBE34D;
+    --b3-font-background6: #FF754D;
+    --b3-font-background7: #F989B1;
+    --b3-font-background8: #FA6277;
+    --b3-font-background9: #D84850;
+    --b3-font-background10: #EA2012;
+    --b3-font-background11: #001860;
+    --b3-font-background12: #0C0C0C;
+    --b3-font-background13: #FDFFFD;
+
+    /* 动画效果 */
+    --b3-transition: transform 0.5s cubic-bezier(0.05, 1.31, 1, 0.94) 0ms;
+    --b3-width-transition: transform 0.5s cubic-bezier(0.05, 1.31, 1, 0.94) 0ms;
+
+    /* 阴影 */
+    --b3-point-shadow: 7px 0 25px rgba(16, 16, 25, 0.10);
+    --b3-dialog-shadow: 7px 0 25px rgba(16, 16, 25, 0.07);
+    /* 图表颜色 */
+    --b3-graph-p-point: #076f7e;
+    --b3-graph-heading-point: #660e7a;
+    --b3-graph-math-point: #80FFA5;
+    --b3-graph-code-point: #00DDFF;
+    --b3-graph-table-point: #37A2FF;
+    --b3-graph-list-point: #FF0087;
+    --b3-graph-todo-point: #FFBF00;
+    --b3-graph-olist-point: #b3005f;
+    --b3-graph-listitem-point: #f65b00;
+    --b3-graph-bq-point: #8d48e3;
+    --b3-graph-super-point: #dd79ff;
+    --b3-graph-doc-point: #202124;
+    --b3-graph-tag-point: #dbf32f;
+    --b3-graph-asset-point: #05c091;
+    --b3-graph-line: #5f6368;
+    --b3-graph-ref-line: #d23f31;
+    --b3-graph-tag-line: #5f6b06;
+    --b3-graph-tag-tag-line: #dbf32f;
+    --b3-graph-asset-line: #037457;
+    --b3-graph-hl-point: #f3a92f;
+    --b3-graph-hl-line: #4285f4;
+
+    /* 编辑器搜索颜色 */
+    --b3-protyle-search-background: #ffe955;
+    --b3-protyle-search-border-color: #f2e680;
+    --b3-protyle-search-current-background: #0C0C0C;
+
+    /* 行内代码片段背景 */
+    --b3-protyle-code-background: rgba(230, 240, 240, 1);
+
+    /*代码块背景前头颜色。*/
+    --b3-protyle-code-linenumber-hl: #D1D4DB;
+
+    /* 所见即所得行内元素颜色 */
+    /*加粗颜色*/
+    --b3-protyle-inline-strong-color: #0C0C0C;
+    /*斜体颜色*/
+    --b3-protyle-inline-em-color: #404D53;
+    /*删除线颜色*/
+    --b3-protyle-inline-s-color: #EA2012;
+    /*链接颜色*/
+    --b3-protyle-inline-link-color: #FF3B77;
+    /*标记背景颜色｜标记文字颜色*/
+    --b3-protyle-inline-mark-background: #FAEDB6;
+    --b3-protyle-inline-mark-color: #404D53;
+    /*标签划线颜色*/
+    --b3-protyle-inline-tag-color: #CF6F90;
+    /*应用块、锚文本颜色*/
+    --b3-protyle-inline-blockref-color: #1F4DEF;
+
+    /* PDF */
+    --b3-pdf-selection: #d0e9c8;
+    --b3-pdf-sidebar-width: 200px;
+    --b3-pdf-offset: 0;
+    --b3-pdf-background1: var(--b3-theme-error);
+    --b3-pdf-background2: #f5822e;
+    --b3-pdf-background3: var(--b3-theme-secondary);
+    --b3-pdf-background4: #65b84d;
+    --b3-pdf-background5: #f5539e;
+    --b3-pdf-background6: var(--b3-theme-primary);
+    --b3-pdf-background7: #944194;
+}
+
+/* PDF */
+.textLayer,
+.pdf__resize {
+    mix-blend-mode: darken;
+}
+
+.b3-typography div.hljs,
+.protyle-wysiwyg div.hljs {
+    background-color: #f8f9fa;
+}
+
+.protyle-background__img img {
+    object-fit: cover;
+    width: 100%;
+    opacity: 1;
+    object-position: center;
+}

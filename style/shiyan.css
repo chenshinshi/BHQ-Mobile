@@ -1,0 +1,1604 @@
+/*键入文字。*/
+ html[lang=zh_CN] .protyle-wysiwyg [spellcheck][contenteditable=true]:empty:before {
+ content: "「💳＋⌨️」 ☻我键入文字…";
+ color: #7F7F7F;
+}
+
+/*字体面板。手机/面板。*/
+.protyle-util {
+ position: fixed;
+ /*border-radius: 0px !important;*/
+ box-shadow: var(--b3-dialog-shadow);
+ border: 1px solid var(--b3-theme-surface-lighter);
+ background-color: var(--b3-menu-background);
+ padding: 10px;
+ max-height: 80vh;
+ z-index: 4;
+}
+
+.color__square {
+    height: 16px;
+    margin-right: 4px;
+    width: 16px;
+    border: 0;
+    transition: var(--b3-transition);
+    box-shadow: 0 0 0 0px var(--b3-theme-surface-lighter) inset;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: var(--b3-theme-background) !important; */
+    border-radius: 100%;
+}
+
+/*正文。*/
+.protyle {
+    font-family: var(--b3-font-family);
+    overflow-x: hidden;
+    background-color: var(--b3-theme-background);
+    position: relative;
+    max-height: 100%;
+    min-height: 104px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;    
+}
+
+/*、面板。*/
+.protyle-hint {
+    position: fixed;
+    border-radius: 20px;
+    /*box-shadow: var(--b3-dialog-shadow);*/
+    border: 2.5px solid #0C0C0C;
+    background-color: var(--b3-menu-background);
+    z-index: 201;
+    overflow: auto;
+    box-sizing: border-box;
+    /*max-height: 76.5vh;*/
+    overflow: auto;
+    /*left: % !important;*/
+    /*top:  !important;*/
+    max-width: 85%;
+}
+
+/*表格*/
+
+/* 设置表格内部边框｜来自min-verse */
+th, td {
+    border:1px  solid rgba(64, 77, 83,1) !important;
+    border-collapse: collapse;
+    color: inherit;
+}
+
+/*点击图片块图片阴影。*/
+.protyle-wysiwyg [data-node-id] .img--select {
+ filter: blur(0.01px) brightness(.90) opacity(80%);
+}
+
+/*图片编辑按钮。*/
+.viewer-toolbar>ul>.viewer-large svg {
+    height: 30px;
+    width: 20px;
+}
+
+.viewer-zoom-in svg, .viewer-zoom-out svg, .viewer-one-to-one svg, .viewer-reset svg, .viewer-prev svg, .viewer-play svg, .viewer-next svg, .viewer-rotate-left svg, .viewer-rotate-right svg, .viewer-flip-horizontal svg, .viewer-flip-vertical svg, .viewer-fullscreen svg, .viewer-fullscreen-exit svg, .viewer-close svg {
+    height: 24px;
+    width: 16px;
+    color: rgba(255,255,255,.78);
+}
+
+/*图片块。*/
+.b3-typography img, .protyle-wysiwyg img {
+ max-width: 100%;
+ margin: 3.5px 1px 2.5px 1px;
+ border-radius: 20px;
+}
+
+/*行内自定义表情。*/
+.b3-typography img.emoji, .protyle-wysiwyg img.emoji {
+    cursor: auto;
+    max-width: 80px;
+    max-height: 80px;
+    /*vertical-align: super;*/
+    margin: auto 1px;
+    border-radius: 0px;
+    min-width: 15px !important;
+    min-height: 15px !important;
+}
+
+/*网络图片标识。*/
+.protyle-wysiwyg [data-node-id] .img__net {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--b3-theme-primary);
+    background-color: rgb(0 0 0 / 0%);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/*引述块｜来自Dark+*/
+
+.b3-typography blockquote,
+.protyle-wysiwyg .bq {
+    background-color: rgba(236,235,240,1);
+}
+
+.b3-typography blockquote, .b3-typography .bq, .protyle-wysiwyg blockquote, .protyle-wysiwyg .bq {
+ padding: 4px;
+ color: var(--b3-theme-on-surface);
+ border-left: 1.5em solid #F9A2B6;
+ background-color: ;
+ margin: 4px 0;
+}
+
+/*块｜来自min-verse*/
+.protyle-wysiwyg [data-node-id] {
+ border-radius: 25px;
+ padding-top: 0px;
+ padding-right: 15px;
+ padding-bottom: 0px;
+ padding-left: 15px;
+}
+
+.b3-typography p, .b3-typography [data-node-id], .protyle-wysiwyg p, .protyle-wysiwyg [data-node-id] {
+ line-height: 1.625;
+ padding: 10px 10px;
+ margin: 7.5px;
+}
+
+/*块标图标。*/
+.protyle-gutters button svg {
+ color: #7F7F7F;
+}
+
+/*１修改块链接块“资源”背景色。*/
+.b3-menu__item--show {
+    background-color: #ececed;
+}
+
+/*选择块点击颜色。*/
+.protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
+ background-color: #FFFFFF !important;
+ box-shadow: 2.5px 0 17.5px  rgba(223, 225, 220, .85) !important;
+}
+
+/*当前块，编辑另一块后颜色。*/
+.protyle-wysiwyg [data-node-id][data-plugin-focus=true] {
+    box-shadow: 0  0 var(--custom-focus-shadow-blur) 0 #dfe1dc inset;
+}
+
+/*鼠标悬浮块时背景。*/
+.protyle-wysiwyg--hl, .protyle-wysiwyg--hl .hljs {
+ background-color: #FFFFFF !important;
+}
+
+/* 调整超级块中元素间距｜来自Dark+ */
+.protyle-wysiwyg div.sb[data-node-id] {
+    border-radius: ;
+    padding: ;
+    margin: -2.5px;
+    /* margin-bottom: 0px; */
+}
+
+.protyle-wysiwyg div.sb[data-node-id] div.sb[data-node-id] {
+    border-radius: 25px;
+    margin: 5px 5px;
+}
+
+/*嵌入块背景。*/
+.protyle-wysiwyg [data-node-id].render-node[data-type=NodeBlockQueryEmbed] {
+  background-color: rgba(236,235,240,1);
+  border-left: 0px dashed var(--b3-theme-surface-lighter);
+}
+
+/*字体元素面板示例。*/
+.b3-color__square {
+    height: 16px;
+    margin-right: 4px;
+    width: 16px;
+    border: 0;
+    transition: var(--b3-transition);
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 0%) inset;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* color: blue; */
+    border-radius: 100%;
+    background-color: rgb(136 144 144 / 20%);
+}
+
+/* 设置自定义文字介绍｜来自min-verse */
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color1)"]:before {
+    content: "水";
+    /*color: var(--b3-font-color1);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color2)"]:before {
+    content: "蓝";
+    /*color: var(--b3-font-color2);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color3)"]:before {
+    content: "绿";
+    /*color: var(--b3-font-color3);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color4)"]:before {
+    content: "紫";
+    /*color: var(--b3-font-color4);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color5)"]:before {
+    content: "黄";
+    /*color: var(--b3-font-color5);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color6)"]:before {
+    content: "橙";
+    /*color: var(--b3-font-color6);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color7)"]:before {
+    content: "粉";
+    /*color: var(--b3-font-color7);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color8)"]:before {
+    content: "桃";
+    /*color: var(--b3-font-color8);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color9)"]:before {
+    content: "荔";
+    /*color: var(--b3-font-color9);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color10)"]:before {
+    content: "红";
+    /*color: var(--b3-font-color10);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color11)"]:before {
+    content: "央";
+    color: #FDFFFD;
+    /*color: var(--b3-font-color11);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color12)"]:before {
+    content: "黑";
+    color: #FDFFFD;
+    /*color: var(--b3-font-color12);*/
+}
+
+.b3-color__square[data-type="color"][style="background-color:var(--b3-font-color13)"]:before {
+    content: "白";
+    color: #0C0C0C;
+    /*color: var(--b3-font-color13);*/
+}
+
+/* 自定义文字背景介绍｜来自min-verse */
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background1)"]:before {
+    content: "水";
+    /* color: var(--b3-font-color1); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background2)"]:before {
+    content: "蓝";
+    /* color: var(--b3-font-color2); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background3)"]:before {
+    content: "绿";
+    /* color: var(--b3-font-color3); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background4)"]:before {
+    content: "紫";
+    /* color: var(--b3-font-color4); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background5)"]:before {
+    content: "黄";
+    /* color: var(--b3-font-color5); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background6)"]:before {
+    content: "橙";
+    /* color: var(--b3-font-color6); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background7)"]:before {
+    content: "粉";
+    /* color: var(--b3-font-color7); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background8)"]:before {
+    content: "桃";
+    /* color: var(--b3-font-color8); */
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background9)"]:before {
+    content: "荔";
+    /*color: var(--b3-font-color9);*/
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background10)"]:before {
+    content: "红";
+    /*color: var(--b3-font-color10);*/
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background11)"]:before {
+    content: "央";
+    color: #FDFFFD;
+    /*color: var(--b3-font-color11);*/
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background12)"]:before {
+    content: "黑";
+    color: #FDFFFD;
+    /*color: var(--b3-font-color12);*/
+}
+
+.b3-color__square[data-type="backgroundColor"][style="background-color:var(--b3-font-background13)"]:before {
+    content: "白";
+    color: #0C0C0C;
+    /*color: var(--b3-font-color13);*/
+}
+
+/* 将自定义文字取消加粗｜来自OneNote */
+strong[style="color: var(--b3-font-color1);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color2);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color3);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color4);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color5);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color6);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color7);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color8);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color9);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color10);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color11);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color12);"] {
+    font-weight: normal;
+}
+
+strong[style="color: var(--b3-font-color13);"] {
+    font-weight: normal;
+}
+
+/* 分割线｜来自OneNote */
+.protyle-wysiwyg [data-node-id].hr>div {
+    border-bottom: 1px solid #F989B1;
+}
+
+/*选字颜色、背景｜来自九炎、吃星尘的羊帮助*/
+::selection {
+color: #FDFFFD !important ;
+background: #F989B1 !important;
+}
+
+/*编辑器搜索出文字颜色｜手机端*/
+mark{
+ background-color: rgb(250, 237, 182, 1);
+ color: rgb(12, 12, 12, 1);
+}
+
+/*关于界面链接颜色*/
+a {
+ outline: 0;
+ text-decoration: none;
+ color: #F989B1 !important;
+}
+
+/*关于界面工作空间|手机端。*/
+ul#workspaceDir {
+ /* margin: 0px; */
+ padding: 2.5px 25%;
+}
+
+/*字号条*/
+.b3-slider {
+ -webkit-appearance: none;
+ border-radius: 10px;
+ height: 15px;
+ background-color: #F989B1;
+ padding: 0 0px;
+}
+
+/*有序列表、无序列表、任务列表、代码块。*/
+.protyle-wysiwyg [data-node-id].li>.protyle-action {
+ left: px;
+ position: absolute;
+ width: 40px;
+ top: 6px;
+ transition: var(--b3-transition);
+ color: #101A1B;
+ justify-content: center;
+ display: flex;
+ align-items: center;
+}
+
+/*自定义表情标题*/
+.b3-list-item__icon svg, .b3-list-item__icon img {
+ float: center;
+ /*margin: 1.25px 0px 0px 0px;*/
+ min-height: 22.5px;
+ min-width: 22.5px;
+ max-heigin: 80px;
+ max-width: 80px;
+ color: ;
+ border-radius: px;
+ cursor: auto;
+}
+
+/*自定义表情标题表情。*/
+.b3-list-item__icon {
+    cursor: auto;
+    /*text-align: center;*/
+    font-size: 22px;
+    /*margin-right: 4px;*/
+    line-height: 22px;
+    */height: 25.5px;*/
+    transition: var(--b3-transition);
+    /*padding: 5px 5px;*/
+    flex-shrink: 0;
+}
+
+/*键盘属性*/
+.b3-typography kbd, .b3-typography span[data-type~=kbd], .protyle-wysiwyg kbd, .protyle-wysiwyg span[data-type~=kbd] {
+ padding: 2px 4px;
+ font: 75% Consolas,"Liberation Mono",Menlo,Courier,monospace;
+ line-height: 1;
+ color: var(--b3-theme-on-surface);
+ vertical-align: middle;
+ background-color: rgba(236,235,240,1);
+ border: solid 1px var(--b3-border-color);
+ border-radius: 3px;
+ box-shadow: inset 0 -1px 0 var(--b3-border-color);
+}
+/*关于界面访问码等框*/
+.b3-button--outline {
+ color: #0C0C0C;
+ box-shadow: inset 0 0 0 0px #0C0C0C;
+ background-color: #F3F3F3;
+ margin: 4px 0px 4px 0px ;
+ 
+}
+
+/*更多--设置--搜索，这些按钮四尾底色。*/
+.b3-switch:checked {
+ background-color: #E9EAEC;
+}
+
+/*更多--设置--搜索，这些按钮。*/
+.b3-switch {
+ background-color: #E9EAEC;
+}
+
+/*iframe右下角线。*/
+.protyle-wysiwyg [data-node-id].iframe .protyle-action__drag {
+ height: 32px;
+ width: 6.5px;
+ background-color: #fb7299;
+ display: none;
+ border-radius: 10px;
+ cursor: nwse-resize;
+ transition: var(--b3-transition);
+ position: absolute;
+ right: 30px;
+ bottom: 30px;
+ box-shadow: 0 0 0px 0px #fb7299;
+ box-sizing: border-box;
+}
+
+.protyle-wysiwyg [data-node-id].iframe .protyle-action__drag::after {
+ height: 6.5px;
+ background-color: #fb7299;
+ border-radius: 10px;
+ box-shadow: 0px 0px 0px 0px #fb7299;
+}
+
+.protyle-wysiwyg [data-node-id].iframe .protyle-action__drag:hover, .protyle-wysiwyg [data-node-id].iframe .protyle-action__drag:hover:after {
+ background-color: #fb7299;
+ box-shadow: 0 0 0px 0px #fb7299;
+}
+
+/*iframe框*/
+.b3-typography iframe, .protyle-wysiwyg iframe {
+ border: 1px solid #F989B1;
+ box-sizing: border-box;
+ height: 400px;
+ max-width: 100%;
+ vertical-align: bottom;
+ border-radius: 25px;
+}
+
+/*图片框下线。*/
+.protyle-wysiwyg [data-node-id] .img .protyle-action__drag:hover {
+ background-color: #fb7299;
+ box-shadow: 0 0 0px 0px var(--b3-theme-on-background);
+}
+
+.protyle-wysiwyg [data-node-id] .img .protyle-action__drag {
+ height: 32px;
+ width: 6.5px;
+ background: #fb7299;
+ display: none;
+ border-radius: 10px;
+ cursor: col-resize;
+ transition: var(--b3-transition);
+ position: absolute;
+ bottom: 15px;
+ right: 15px;
+ box-shadow: 0 0 0px 0px var(--b3-theme-on-surface);
+ box-sizing: border-box;
+ z-index: 1;
+}
+
+/*面包屑。*/
+.toolbar--border input#toolbarName:hover {
+ border-color: rgba(236,235,240,0);
+}
+/*面包屑。*/
+/*历史数据面板。*/
+/*AI界面|手机端。*/
+.layout-tab-bar {
+    background-color: #F3F3F3;
+    border-radius: 10px; 
+    /*border-top-right-radius: 25px;*/
+    /*border-top-left-radius: 25px;*/
+    border: 2.5px solid #ccc;
+    border-color: black;
+    margin: 15px;
+}
+
+.history__repo {
+    background-color: var(--b3-theme-background);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
+}
+
+.layout-tab-bar.fn__flex {
+ border-radius: 15px 15px 15px 15px !important;
+ margin: 25px 25px 25px 25px;
+ line-height: 32px;
+ border-radius: 15px !important;
+ /*box-shadow: inset 7px 0 25px  rgba(16, 16, 25, 0.07) !important;*/
+ background-color: rgba(16, 16, 25, 0.07);
+}
+
+ul.layout-tab-bar.layout-tab-bar--readonly.fn__flex-1 {
+    max-width: 15%;
+    min-width: 100px;
+    right: 10px;
+}
+
+.layout-tab-bar .item--full.item--focus:after {
+  background-color: #faf9fe00;
+}
+
+.fn__flex-1 {
+ flex: 1;
+ min-width: .1px;
+ overflow: auto;
+ min-height: .1px;
+ /*border-radius: 15px;*/
+ /*padding: 7.5px;*/
+}
+
+/*面包屑下划线。*/
+.layout-tab-bar .item--focus:after {
+    content: "";
+    width: 100%;
+    height: 7.5px;
+    border-radius: 10px;
+    bottom: 1.25px;
+    position: absolute;
+    background-color: var(--b3-theme-background-light);
+}
+
+/*正文标题|电脑端。*/
+.protyle-title__input {
+ background: #FFFFFF;
+}
+
+/*搜索框。*/
+.search__header .b3-text-field--text {
+ height: 40px;
+ line-height: 32px;
+ border-radius: 0;
+ padding: 0px 15px 0px 72.5px !important;
+ margin: 9px 15px 8px 9px;
+}
+
+/*搜索框图标。*/
+.search__header .b3-form__icon-icon {
+ top: 21.5px;
+ left: 26px;
+}
+
+.search__arrowdown {
+ height: 10px;
+ width: 10px;
+ left: 55px;
+ top: 25px;
+}
+
+/*搜索框。*/
+.search__header {
+    border-bottom: 0px solid var(--b3-theme-surface-lighter);
+    background: #F3F3F3;
+    border-radius: 15px 15px 0px 0px;
+}
+
+/*关系图搜索框。*/
+.search__label .b3-form__icon-input {
+ width: 50%;
+}
+
+/*标题框｜手机端。*/
+.b3-text-field:hover {
+ border-color: #FAF9FE;
+}
+
+/*设置访问授权码等点击后出现框。*/
+.b3-button--outline:hover, .b3-button--outline:focus {
+ background-color: #F3F3F3;
+ box-shadow: inset 0 0 0 0px #EDECF1;
+}
+
+/*设置黑点。*/
+.b3-switch:checked:after {
+ background-color: #D7DADB;
+ border-color: #D7DADB; 
+ }
+ 
+.b3-switch:after {
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+ /*集市分类分隔线。*/
+ .layout-tab-bar .item:not(:last-child), .layout-tab-bar .item:last-child:not(.item--focus):not(.item--readonly) {
+ box-shadow: 2px -26px 0px 0px rgba(16, 16, 25, 0.07),1px -4px 1px 0px rgba(243,243,243,0);
+}
+
+/*外观点击后出现框。*/
+.b3-select:focus {
+ box-shadow: 0 0 0 0px var(--b3-theme-primary-lighter);
+}
+
+/*主题选择等框。*/
+/*外观按钮。*/
+.b3-select {
+    background-color: .b3-select;
+    margin: 5px 0px 5px 0px;
+    height: 40px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 0 .4px rgb(5 17 19 / 0%);
+}
+
+.b3-menu__item--current:not(.b3-menu__item--readonly) {
+    background-color: #ececef;
+}
+
+/*代码块对齐、圆角。*/
+.b3-typography .hljs, .protyle-wysiwyg .hljs {
+ border-radius: 0 25px 25px 0;
+ padding: 40px 0px 30px 15px;
+ font-size: 90%;
+ overflow: auto;
+ font-family: var(--b3-font-family-code);
+ overflow-x: overlay;
+}
+
+/*代码块背景颜色。*/
+.b3-typography div.hljs, .protyle-wysiwyg div.hljs {
+ background: #E6F0F0 !important;
+}
+
+.protyle-linenumber__rows {
+ background: #E6F0F0 !important;
+ font-size: 90%;
+ top: 10px;
+ left: 12px;
+ width: 62.5px;
+ padding: 40px 5px 30px 0px;
+}
+
+/*行内备注颜色背景。*/
+.b3-typography span[data-type~=inline-memo], .protyle-wysiwyg span[data-type~=inline-memo] {
+ background-color: #FAEDB6;
+ border-bottom: 1.5px solid #F989B1;
+}
+
+/*字体元素圆角。*/
+span {
+    border-radius: 0px;
+}
+
+/*代码块字颜色。*/
+.hljs-attr, .hljs-attribute, .hljs-literal, .hljs-meta, .hljs-number, .hljs-operator, .hljs-selector-attr, .hljs-selector-class, .hljs-selector-id, .hljs-variable {
+ color: #404D53 !important;
+}
+
+/*代码块语言栏位置。*/
+.b3-typography .code-block .protyle-action, .protyle-wysiwyg .code-block .protyle-action {
+ left: 15.5px;
+ top: 20px;
+ right: 30px;
+}
+
+/*代码块调出块菜单时ui。*/
+.protyle-wysiwyg--hl .protyle-linenumber__rows, .protyle-wysiwyg--select .protyle-linenumber__rows.protyle-wysiwyg--hl .protyle-linenumber__rows, .protyle-wysiwyg--select .protyle-linenumber__rows {
+ background-color:rgba(230, 240, 240, 1)!important;
+}
+
+/* 块标切换动画，来自于Notion主题 */
+.protyle-gutters {
+    transition: all 200ms ease-out;
+}
+
+/*目录界面线条*/
+.toolbar--border {
+ border-bottom: 1px solid rgb(0 0 0 / 0%);
+}
+
+/*手机端顶菜单栏。*/
+.toolbar--dark {
+ background-color: #faf9fe !important;
+}
+
+/*文档树等图标等点击｜手机端。*/
+.toolbar__icon--active {
+ background-color: rgb(0 0 0 / 0%);
+ color: #404D53;
+}
+
+/*标题框栏图标。｜手机端。*/
+.toolbar__icon {
+    height: 20px;
+    width: 20px;
+    padding: 5px;
+    flex-shrink: 0;
+    margin: 4px;
+    color: var(--b3-theme-on-surface);
+}
+
+/*文档树增加文档等图标。｜手机端。*/
+.b3-list-item__action svg {
+    height: 18px;
+    width: 18px;
+}
+
+/*文档树展开笔记本图标。｜手机端。*/
+.b3-list-item__arrow {
+    flex-shrink: 0;
+    height: 16.5px;
+    width: 16.5px;
+    transition: transform .15s cubic-bezier(0, 0, 0.2, 1),opacity 1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/*右侧栏图标。｜手机端。*/
+.b3-list-item--big .b3-list-item__graphic {
+    margin-right: 24px;
+    height: 20px;
+    width: 20px;
+}
+
+.b3-menu--fullscreen .b3-menu__icon {
+    height: 17px;
+    width: 17px;
+    margin: 0 16px 0 8px;
+    border-radius: 0px;
+}
+
+/*目录等图标点击颜色｜手机端。*/
+.b3-list-item__icon:hover {
+  color: var(--b3-theme-on-background);
+  background-color: rgb(0 0 0 / 0%);
+  border-radius: 2px;
+}
+
+/*侧栏笔记本目录。*/
+.b3-list-item {
+ line-height: 30px;
+ padding: 10px 10px 10px 10px;
+ display: flex;
+ cursor: pointer;
+ align-items: center;
+ position: relative;
+ background-color: rgba(0,0,0,0);
+ text-align: left;
+ border: 0px;
+ color: var(--b3-theme-on-background);
+ margin: 2.5px 20px;
+}
+
+/*目录文字.*/
+.b3-list-item__text {
+    flex: 1;
+    /*background-color: #F3F3F3;*/
+    text-align: left;
+    border: 0;
+    padding: 0px 5px;
+    color: var(--b3-theme-on-background);
+    word-break: break-all;
+    -webkit-line-clamp: 10;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    border-radius: 10px;
+    width: 150px;	
+}
+
+/*文档树等图标点击｜电脑端。*/
+.dock__item--activefocus {
+    color: #404D53 !important;
+    background-color: rgb(0 0 0 / 0%) !important;
+}
+
+/*电脑端菜单顶栏＋手机端标题背景。*/
+.toolbar {
+    background-color: #FAF9FE;
+}
+
+/*点击后背景。*/
+.toolbar__item:not(.toolbar__item--disabled):not(.toolbar__item--close):hover, .toolbar__item--active {
+ background-color: #f3f3f3;
+ border-radius: 6px;
+}
+
+/*标题｜手机端。*/
+.toolbar__title {
+    flex: 1;
+    padding: 3.5px 5px;
+    border: 1px solid rgba(0,0,0,0);
+    background-color: #F3F3F3;
+    border-radius: 15px;
+    color: #7F7F7F;
+    .toolbar__title
+}
+
+button, input, select, textarea {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    font-family: var(--b3-font-family);
+    outline: none;
+}
+
+/*顶栏图标颜色。*/
+.toolbar__item { 
+ color: #101A1B;
+}
+
+/*设置界面线条。*/
+.b3-label {
+ border-bottom: 1px solid rgb(0 0 0 / 0%);
+}
+
+/*设置界面。|电脑端。*/
+.config__tab-container {
+ overflow: auto;
+ box-sizing: border-box;
+ flex: 1;
+ background-color: var(--b3-theme-background);
+ border-radius: 25px 25px 10px 10px;
+}
+
+.b3-dialog__body {
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    border-radius: 25px;
+    flex-direction: column;
+}
+
+/*笔记内容菜单。*/
+.b3-menu__separator {
+ background-color: #F3F3F3;
+}
+
+.b3-menu--fullscreen .b3-menu__title {
+    border-bottom: .5px solid var(--b3-theme-background-light);
+    line-height: 30px;
+    padding: 20px 20px;
+    margin: 10px 40px 10px 40px;
+    border-radius: 15px;
+    display: flex;
+    background-color: #E6E6E6;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 30px;
+}
+
+.b3-menu__item {
+    padding: 5px 10px;
+    border-radius: 15px;
+    user-select: none;
+    display: flex;
+    line-height: 30px;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 0;
+    text-align: left;
+    width: 100%;
+    background-color: var(--b3-menu-background);
+    color: var(--b3-theme-on-background);
+    position: relative;
+    box-sizing: border-box;
+}
+
+.b3-menu--fullscreen .b3-menu__item {
+    border-bottom: 0px solid var(--b3-theme-background-light);
+    line-height: 42px;
+    background-color: var(--b3-theme-background);
+    text-decoration: none;
+    margin: 15px auto !important;
+    width: 95%;
+   border-radius: 15px;
+   overflow: auto;
+   margin: 15px 0;
+}
+
+.b3-menu--fullscreen .b3-menu__separator {
+    margin: 0;
+    height: 5px;
+    background-color: var(--b3-menu-background);
+    border-bottom: .5px solid var(--b3-theme-background-light);
+}
+
+.b3-menu__item--current {
+ background-color: #F3F3F3;
+}
+
+/*１正文右上菜单。２插件日历热力图背景。３手机端右侧菜单背景。*/
+.b3-menu {
+    position: fixed;
+    border-radius: 15px;
+    /*box-shadow: 0px 0px 1px #000 !important;*/
+    border: 2.5px solid #0c0c0c;
+    background-color:rgb(255 255 255) ;
+    z-index: 210;
+    max-height: 100%;
+    overflow: auto;
+    margin:  0px;
+    padding: 10px;
+    /*left: 23.5% !important;*/
+    /*top: 15% !important;*/
+    /*height:50%;*/
+}
+
+/*电脑端删除笔记本界面＋点击访问授权码界面确认文字颜色。*/
+.b3-button--text, .b3-button--cancel {
+ color: #0C0C0C;
+ background-color: rgb(0 0 0 / 0%);
+}
+
+/*电脑端删除笔记本界面＋点击访问授权码界面线。*/
+.b3-dialog__header {
+ border-bottom: 0px solid var(--b3-theme-surface-lighter);
+}
+
+.b3-dialog__action {
+ border-top: 0px solid var(--b3-theme-surface-lighter);
+}
+
+/*笔记本设置界面复制id|手机端。*/
+.b3-button:active {
+ box-shadow: 0px 5px 5px -3px rgba(0,0,0,0);
+}
+
+.b3-button:hover, .b3-button:focus, .b3-button--progress {
+ box-shadow:  0px 5px 5px -3px rgba(0,0,0,0);
+}
+
+/*闪卡。*/
+.fn__flex-column, .card__main {
+    min-height: 85%;
+    max-height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*笔记本设置界面复制id|手机端＋帐号管理界面账号管理＋登出＋注销账号＋刷新图标＋闪卡按钮手机端。*/
+.b3-button {
+ color: #B1B4C5;
+ background-color: #E6E6E6; 
+ line-height: 32.5px;
+ border-radius: 15px;
+ /* padding: 10px !important; */
+ margin: auto 2.5px;*/
+}
+
+.card__action {
+ /*padding: 22.5px 30px;*/
+}
+
+/*闪卡按钮Again。*/
+.b3-button--error {
+    color: rgb(255 255 255)!important;
+    background-color: #5669ff;
+}
+
+/*闪卡按钮Hard。*/
+.b3-button--warning {
+    color: rgb(255 255 255)!important;
+    background-color: #f3547a;
+}
+
+/*闪卡按钮Good。*/
+.b3-button--info {
+    color: rgb(255 255 255)!important;
+    background-color: #48d1cc;
+}
+
+/*闪卡按钮Easy。*/
+.b3-button--success {
+    color: rgb(255 255 255)!important;
+    background-color: #201e21;
+}
+
+/*点击笔记本···等图标背景颜色。*/
+.b3-list-item__action:hover {
+ background-color: rgb(0 0 0 / 0%);
+}
+
+/*集市更新图标颜色。*/
+.ft__primary {
+ color: #404d53;
+}
+
+/*消息框。｜手机端。*/
+.b3-snackbar__content {
+ color: #404D53;
+ box-shadow: 7px 0 25px  rgba(16, 16, 25, 0.07);
+ background-color: #E6E6E6;
+}
+
+/*头像界面用户名。*/
+.fn__a {
+ text-align: center;
+}
+
+/*账号管理头像|手机端。*/
+#model .config-account__avatar {
+ background-color: rgba(255,255,255,.8);
+ box-shadow: 0 3px 6px 0 rgba(236,235,240,1), 0 -5.5px 6px 0 rgba(249,137,177, 1);
+ background-image: radial-gradient(circle,rgba(250,223,222, 1),#F9DAD2,#7C73FE);
+}
+
+/*侧栏头像|手机端。*/
+img.b3-menu__icon {
+ height: 45px !important;
+ width: 45px !important;
+ border-radius: 100% !important;
+ margin: auto 15px auto 0px !important;
+}
+
+/*账号管理界面头衔|手机端。*/
+.b3-chip {
+ background-color: #F3F3F3;
+ color: var(--b3-theme-on-background);
+}
+
+/*点击访问授权码动画＋背景。*/
+/*闪卡面板。*/
+.b3-dialog__container {
+    border-radius: 20px;
+    background-color: var(--b3-theme-surface);
+    position: relative;
+    box-shadow: var(--b3-dialog-shadow);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+ transform: scale(1);
+ opacity: 0;
+ transition: opacity 1s linear,transform 2s 0mscubic-bezier(.28,1,.6,1);
+ background-color: #F3F3F3;
+ border: 0px solid var(--b3-theme-surface-lighter);
+}
+
+.b3-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*侧栏已关闭笔记本高度｜手机端。*/
+ul.b3-list.b3-list--background.fn__flex-column {
+height: 60px !important;
+margin: 20px;
+}
+
+/*已关闭笔记本|手机端。*/
+ul.b3-list.b3-list--background.fn__flex-column.fn__flex-1 {
+ background: #f3f3f3;
+ margin: 10px;
+ padding: 10px 5px;
+ border-radius: 15px;
+}
+
+/*设置面板。*/
+.fn__flex-column {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px;
+}
+
+.b3-dialog--open .b3-dialog__container {
+    transform: none;
+    opacity: 1;
+    max-height: 75vh;
+}
+
+/*设置内面板。*/
+.b3-tab-container {
+    background-color: #FAF9FE;
+    border-radius: 25px 25px 25px 0px !important;
+}
+
+/*反链链接界面“提及”。*/
+.toolbar__text {
+ height: px;
+}
+
+/*账号管理界面账号管理栏。*/
+#model .config-account__info {
+ height: 120px;
+}
+
+/*已经建立块提示。*/
+.status {
+ text-indent: 30px;
+}
+
+/*/面板模板图标颜色＋重置数据仓库提醒颜色。*/
+.ft__error {
+ color: var(--b3-theme-on-background) !important;
+}
+
+/*笔记内容右上菜单点击出现背景。*/
+.block__icon:hover:not([disabled]):not(.ft__primary), .block__icon--active {
+ background-color: rgba(230, 240, 240, 0);
+}
+
+/*笔记内容右上菜单“模式切换”子菜单。*/
+.b3-menu__item--show .b3-menu__submenu {
+    border: 2.5px solid #17E4FF
+    /*top: 70px !important;*/
+    /*height:50%;*/
+    max-height: 100%;
+}
+
+/*正文右上菜单次菜单面板。*/
+.b3-menu__submenu {
+    overflow: auto;
+    display: none;
+    /*max-height: 80vh;*/
+    border: 2.5px solid #17E4FF;
+    border-radius: 25px;
+    background-color: #F3F3F3;
+    padding: 10px;
+    position: fixed;
+    box-shadow: var(--b3-dialog-shadow);
+    z-index: 1;
+}
+
+/*笔记内容右上菜单子菜单“所见即所得”文字颜色。*/
+.b3-menu__item--selected {
+ color: var(---b3-theme-error);
+}
+
+/*新建笔记本＋新建日记＋属性背景｜手机端。*/
+.b3-dialog__scrim {     
+ background:linear-gradient(50deg,#E071AA 5%,#A8E8DF 55%,#A8E8DF 60%, #E838A8 125%); 
+}
+
+/*激活码确认等文字。*/
+.b3-button--white {
+ background-color: rgb(1,1,1,0);
+}
+
+/*头题图。*/
+.protyle-background__img img {
+ height: 225px;
+ border-radius: 0px;
+ margin: 1.5px 0px 5px 0px;
+}
+
+/*头题图+正文滚动。*/
+.protyle-content {
+ overflow-y: scroll;
+  transition: transform 0.25s cubic-bezier(0.05, 1.31, 1, 0.94) 0ms;
+}
+
+
+/*头题图表情。*/
+.protyle-background__icon {
+ font-size: 55px;
+ line-height: 80px;
+ text-align: center;
+ font-family: var(--b3-font-family-emoji);
+ margin-right: 16px;
+ bottom: 55px;
+}
+
+.protyle-background__iconw {
+ bottom: 25px;
+ display: flex;
+ position: absolute;
+}
+
+/*头题图功能标签。*/
+.protyle-background__icon:not(.fn__none)+.protyle-icons {
+ margin-top: -32.5px;
+ margin-bottom:30px;
+}
+
+.protyle-background__img .protyle-icons {
+ padding-bottom: 25px;
+ 
+ /*top: 0px;*/
+ /*margin-left: -44px;*/
+ left: 155px;
+ /*right: 32px;*/
+}
+
+/*头题图标签内边距。*/
+.protyle-background__tags {
+    padding: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+/*头题图单标签。*/
+.protyle-background__tags .item {
+    margin: 50%;
+}
+
+/*头题图标签选择背景＋侧栏笔记本选择点击背景。。*/
+.b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+ background-color: #e6e6e6;
+}
+
+/*头题图点击菜单。*/
+.protyle-icon {
+ background-color: #E6E6E6;
+ color: #101A1B;
+}
+
+.protyle-icon:hover {
+ color: #101A1B;
+ background-color: #F3F3F3;
+}
+
+/*正文顶部面包屑。*/
+.protyle-breadcrumb__item {
+ color: #CFCFCF;
+ line-height: 15px;
+ margin: 0px 0px 1px 0px;
+}
+
+.protyle-breadcrumb {
+ background-color: #FAF9FE;
+}
+
+/*手机单个面包屑。*/
+.protyle-breadcrumb__item:hover, .protyle-breadcrumb__item--active {
+  color: #7F7F7F;
+  background-color: #faf9fe;
+}
+
+.protyle-breadcrumb__icon {
+    margin-right: 8px;
+    opacity: 1;
+    border: 0;
+    line-height: 24px;
+    border-radius: var(--b3-border-radius);
+    align-self: center;
+    padding: 0 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: #c4c4c4;
+    background-color: #f3f3f3;
+}
+
+/*侧栏点击标题颜色。*/
+.b3-list--background .b3-list-item:hover:not(.b3-list-item--focus) {
+ background-color: #f3f3f3;
+}
+
+.b3-list-item__toggle--hl:hover {
+    color: var(--b3-theme-on-background);
+    background-color: #F3F3F3;
+    border-radius: var(--b3-border-radius);
+}
+
+.layout__tab--active .b3-list--background .b3-list-item--focus:not(.dragover):not(.dragover__top):not(.dragover__bottom) {
+    background-color: #F3F3F3;
+}
+
+/*文档列表被选择背景。*/
+.b3-list--background .b3-list-item {
+    border-radius: 15px;
+    /* white-space: pre-wrap; */
+}
+
+/*侧栏空白处阴影。*/
+.scrim {
+ background-color: rgb(0 0 0 / 2.5%);
+}
+
+/*左侧栏|手机端。*/
+.fn__flex-1.b3-list--mobile {
+ background-color: #FFFFFF;
+}
+
+/*最近的文档列表|手机端。*/
+.b3-list--mobile .b3-list-item__graphic {
+ width: 25px;
+ height: 25px;
+ line-height: 25px;
+ font-size: 18px;
+}
+
+/*右侧栏|手机端。*/
+.side-panel {
+ background-color: #FFFFFF;
+ transition:  0.5s cubic-bezier(0.05, 1.31, 1, 0.94) 0ms;
+}
+
+.b3-menu--fullscreen .b3-menu__items {
+ flex: 1;
+ overflow: auto;
+ padding: 0px 0px;
+ margin: 10px 10px;
+ background-color: #E6E6E6;
+ border-radius: 20px;
+}
+
+/*右侧栏目录字体大小|手机端。*/
+.b3-menu--fullscreen .b3-menu__label {
+ font-size: 15px;
+}
+
+.b3-menu--fullscreen .b3-menu__title>.b3-menu__label {
+    line-height: 15.5px;
+}
+
+/*菜单动画︱手机端。*/
+.b3-menu--fullscreen {
+    transition: transform 0.5s cubic-bezier(0.05, 1.31, 1, 0.94) 0ms;
+    border-radius: 0px;
+    box-shadow: inset 0px 2.5px 0px 0px #0C0C0C;
+    border-top: 2.5px solid #f3f3f3;
+    border-right: 2.5px solid #f3f3f3;
+    border-bottom: 2.5px solid #f3f3f3;
+    border-left: 2.5px solid #f3f3f3;
+}
+
+/*左右边框|电脑端。*/
+.dock {
+ background-color: #FAF9FE;
+}
+
+/*文档树边框|电脑端。*/
+.layout-tab-container {
+ background-color: #FAF9FE;
+}
+
+/*文档树列表。*/
+.b3-list-item {
+    line-height: 40px;
+    padding: 10px 5px 10px 5px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
+    border: 0px;
+    color:#E9EAEC;
+    margin: 10px 5px;
+}
+
+/*正文。*/
+.protyle {
+ background-image: linear-gradient(#F1F6F7 10%,#F9FBFC) !important;
+}
+
+/*正文内容条。*/
+.protyle-scroll__bar .b3-slider {
+ width: var(--b3-dynamicscroll-width);
+ display: block;
+ padding: 0px 15px;
+}
+
+body {
+ background: #F5F5F5;
+}
+
+}
+/*集市主题浏览。*/
+.b3-card {
+ background-color: #FAF9FE;
+}
+
+/*集市主题下载。*/
+.config-bazaar__readme {
+ background-color: #FAF9FE;
+}
+
+/*账号右栏|电脑端。*/
+.config-account__center--text {
+ background-color: #FAF9FE;
+}
+
+/*数据历史左右图标。*/
+.block__icon {
+ margin: 1.5px 0px 0px 0px;
+}
+
+/*数据历史搜索框。*/
+/*关系图搜索框。*/
+/*行内备注内容框、标题框圆角+颜色｜手机端。*/
+.b3-text-field {
+ margin: 4px 0px 4px 0px;
+ line-height: 32px;
+ border-radius: 15px !important;
+ box-shadow:inset 7px 0 25px  rgba(16, 16, 25, 0.07) !important;
+ background-color: #F3F3F3;
+ color: #B1B4C5;
+ overflow: auto;
+}
+
+.layout-tab-bar .item__text {
+    text-align: center;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: var(--b3-theme-on-surface);
+    transition: var(--b3-transition);
+    padding: 0 8px;
+    white-space: pre-wrap;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0, #000 12px);
+}
+
+/*关系图搜索框图标。*/
+.b3-form__icon--small .b3-form__icon-icon {
+left: 5.5px;
+top: 12.5px;
+height: 14px;
+width: 14px;
+}
+
+/*数据历史搜索框图标。*/
+.b3-form__icon-icon {
+ top: 15px;
+}
+
+/*属性在块的显示ui。*/
+.protyle-attr {
+ top: -20px;
+ left:40px;
+}
+
+/*功能块右上菜单。*/
+.protyle-icons {
+ top: 20px;
+ right: 20px;
+}
+
+/*工具栏功能使用颜色｜手机端。*/
+.protyle-toolbar__item--current {
+ color: #F989B1;
+ background-color: rgba(16, 16, 25, 0);
+}
+
+/*行内元素栏。*/
+.protyle-toolbar {
+    background-color: var(--b3-theme-background);
+    z-index: 3;
+    position: fixed;
+    /*box-shadow: var(--b3-point-shadow);*/
+    border-radius: 10px;
+    display: flex;
+    transition: top .15s cubic-bezier(0, 0, 0.2, 1) 0ms;
+    border: 1px solid var(--b3-theme-surface-lighter);
+    /*width: 90%;*/
+}
+
+#keyboardToolbar {
+ bottom: 0;
+ width: 100%;
+ box-sizing: ;
+ height: 35px;
+ background: #F3F3F3;
+ z-index: 221;
+ display: flex;
+ border-top: 0px solid var(--b3-theme-surface-lig;
+ box-shadow:inset 7px 0 25px  rgba(16, 16, 25, 0.07) !important;
+}
+
+/*头题图表情面板。*/
+.emojis__panel {
+ flex: 1;
+ overflow: auto;
+ /* padding: 0 8px; */
+ /* margin-right: -20px; */
+ margin:  0px;
+ padding: 10px;
+ /*left: 23.5% !important;*/
+}
+
+.b3-list-item__icon {
+ text-align: center;
+ font-size: 30px;
+ margin-right: 4px;
+ line-height: 40px;
+ height: 40px;
+ transition: var(--b3-transition);
+ padding: 0 4px;
+ flex-shrink: 0;
+}
+
+/*１表情面板。*/
+.emojis__item {
+ margin: 2.5px;
+}
