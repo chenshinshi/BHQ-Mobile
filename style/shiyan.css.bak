@@ -793,6 +793,10 @@ span {
  color: #404D53;
 }
 
+.toolbar__icon--active, .toolbar__icon:not(.toolbar__icon-deactivate):focus, .toolbar__icon:not(.toolbar__icon-deactivate):hover {
+    background-color: #f3f3f3;
+}
+
 /*标题框栏图标。｜手机端。*/
 .toolbar__icon {
     height: 20px;
@@ -942,8 +946,8 @@ button, input, select, textarea {
 .b3-menu--fullscreen .b3-menu__title {
     border-bottom: .5px solid var(--b3-theme-background-light);
     line-height: 30px;
-    padding: 2px 2.5px;
-    margin: 2.5px 40px 10px 40px;
+    padding: 20px 20px;
+    margin: 10px 40px 10px 40px;
     border-radius: 15px;
     display: flex;
     background-color: #E6E6E6;
@@ -1107,6 +1111,7 @@ button, input, select, textarea {
  background-color: rgba(255,255,255,.8);
  box-shadow: 0 3px 6px 0 rgba(236,235,240,1), 0 -5.5px 6px 0 rgba(249,137,177, 1);
  background-image: radial-gradient(circle,rgba(250,223,222, 1),#F9DAD2,#7C73FE);
+ border: 5px solid var(--b3-theme-surface-lighter);
 }
 
 /*侧栏头像|手机端。*/
@@ -1256,9 +1261,16 @@ ul.b3-list.b3-list--background.fn__flex-column.fn__flex-1 {
 
 /*头题图。*/
 .protyle-background__img img {
- height: 225px;
+ /*height: 225px;*/
+ max-height: 260px;
  border-radius: 0px;
  margin: 1.5px 0px 5px 0px;
+}
+
+/*头题图无图时。*/
+.protyle-background {
+    position: relative;
+    padding-bottom: 100px;
 }
 
 /*头题图+正文滚动。*/
@@ -1279,19 +1291,19 @@ ul.b3-list.b3-list--background.fn__flex-column.fn__flex-1 {
 }
 
 .protyle-background__iconw {
- bottom: 25px;
+ bottom: 55px;
  display: flex;
  position: absolute;
 }
 
 /*头题图功能标签。*/
 .protyle-background__icon:not(.fn__none)+.protyle-icons {
- margin-top: -32.5px;
- margin-bottom:30px;
+ margin-top: 0px;
+ margin-bottom:-25px;
 }
 
 .protyle-background__img .protyle-icons {
- padding-bottom: 25px;
+ padding-bottom: 5px;
  
  /*top: 0px;*/
  /*margin-left: -44px;*/
