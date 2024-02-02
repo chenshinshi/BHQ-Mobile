@@ -144,7 +144,7 @@ th, td {
 .b3-typography p, .b3-typography [data-node-id], .protyle-wysiwyg p, .protyle-wysiwyg [data-node-id] {
  line-height: 1.625;
  padding: 10px 10px;
- margin: 7.5px;
+ /*margin: 7.5px;*/
 }
 
 /*块标图标。*/
@@ -157,6 +157,16 @@ th, td {
     background-color: #ececed;
 }
 
+/*链接视频。*/
+.b3-typography video, .protyle-wysiwyg video {
+    max-height: 90vh;
+    max-width: 90%;
+    min-width: 10px;
+    vertical-align: bottom;
+    border-radius: 15px;
+    /*margin: 15px 15px;*/
+}
+
 /*选择块点击颜色。*/
 .protyle-wysiwyg--select, .protyle-wysiwyg--select .hljs {
  background-color: #FFFFFF !important;
@@ -164,8 +174,12 @@ th, td {
 }
 
 /*当前块，编辑另一块后颜色。*/
+/*.protyle-wysiwyg [data-node-id][data-plugin-focus=true] {
+  box-shadow: 25px 0px 0px 0px #BCCAD6 inset  !important;
+}*/
+
 .protyle-wysiwyg [data-node-id][data-plugin-focus=true] {
-    box-shadow: 0  0 var(--custom-focus-shadow-blur) 0 #dfe1dc inset;
+  box-shadow: 0 7.5px 0px 0 #BCCAD6 inset   !important;
 }
 
 /*鼠标悬浮块时背景。*/
@@ -511,30 +525,35 @@ ul#workspaceDir {
 
 /*iframe右下角线。*/
 .protyle-wysiwyg [data-node-id].iframe .protyle-action__drag {
- height: 32px;
- width: 6.5px;
- background-color: #fb7299;
- display: none;
- border-radius: 10px;
- cursor: nwse-resize;
- transition: var(--b3-transition);
- position: absolute;
- right: 30px;
- bottom: 30px;
- box-shadow: 0 0 0px 0px #fb7299;
- box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(255,252,242,0.35);
+    display: none;
+    border-radius: 50%;
+    border: 50px;
+    cursor: nwse-resize;
+    transition: var(--b3-transition);
+    position: absolute;
+    right: 30%;
+    left: 70%;
+    /* top: 7.5%; */
+    bottom: 87.5% !important;
+    box-shadow: 5px 5px 5px 5px #F2EBBF;
+    box-sizing: border-box;
+    /* backdrop-filter: blur(20px); */
 }
 
 .protyle-wysiwyg [data-node-id].iframe .protyle-action__drag::after {
- height: 6.5px;
- background-color: #fb7299;
- border-radius: 10px;
- box-shadow: 0px 0px 0px 0px #fb7299;
+ height: 2.5px;
+ background-color: #BDDBDA;
+ border-radius: 50% 100%;
+ box-shadow: 0px 0px 0px 0px #BDDBDA;
 }
 
 .protyle-wysiwyg [data-node-id].iframe .protyle-action__drag:hover, .protyle-wysiwyg [data-node-id].iframe .protyle-action__drag:hover:after {
- background-color: #fb7299;
- box-shadow: 0 0 0px 0px #fb7299;
+ background-color: rgba(255, 255, 255, 0);
+ ;
+ box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0);
 }
 
 /*iframe框*/
@@ -549,23 +568,23 @@ ul#workspaceDir {
 
 /*图片框下线。*/
 .protyle-wysiwyg [data-node-id] .img .protyle-action__drag:hover {
- background-color: #fb7299;
- box-shadow: 0 0 0px 0px var(--b3-theme-on-background);
+ background-color: rgba(255, 255, 255, 0);
+ box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0);
 }
 
 .protyle-wysiwyg [data-node-id] .img .protyle-action__drag {
- height: 32px;
- width: 6.5px;
- background: #fb7299;
- display: none;
- border-radius: 10px;
- cursor: col-resize;
- transition: var(--b3-transition);
- position: absolute;
- bottom: 15px;
- right: 15px;
- box-shadow: 0 0 0px 0px var(--b3-theme-on-surface);
- box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(84,243,205,0.50);
+    border-radius: 50%;
+    /* border: 50px; */
+    cursor: nwse-resize;
+    transition: var(--b3-transition);
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 15px rgba(243,84,122,0.75);
+    box-sizing: border-box;
  z-index: 1;
 }
 
@@ -576,6 +595,7 @@ ul#workspaceDir {
 /*面包屑。*/
 /*历史数据面板。*/
 /*AI界面|手机端。*/
+/*数据表格*/
 .layout-tab-bar {
     background-color: #F3F3F3;
     border-radius: 10px; 
@@ -601,6 +621,7 @@ ul#workspaceDir {
  margin: 25px 25px 25px 25px;
  line-height: 32px;
  border-radius: 15px !important;
+ min-width: 130px;
  /*box-shadow: inset 7px 0 25px  rgba(16, 16, 25, 0.07) !important;*/
  background-color: rgba(16, 16, 25, 0.07);
 }
@@ -622,6 +643,12 @@ ul.layout-tab-bar.layout-tab-bar--readonly.fn__flex-1 {
  min-height: .1px;
  /*border-radius: 15px;*/
  /*padding: 7.5px;*/
+}
+
+.av__panel .b3-menu__item {
+    transition: margin .2s cubic-bezier(0, 0, 0.2, 1) 0ms;
+    padding: 10p;
+    margin: 15px auto;
 }
 
 /*面包屑下划线。*/
@@ -884,6 +911,7 @@ span {
 /*电脑端菜单顶栏＋手机端标题背景。*/
 .toolbar {
     background-color: #FAF9FE;
+    padding: 10px 20px;
 }
 
 /*点击后背景。*/
@@ -931,7 +959,7 @@ button, input, select, textarea {
 }
 
 .b3-dialog__body {
-    overflow: hidden;
+    /*overflow: hidden;*/
     flex: 1;
     display: flex;
     border-radius: 25px;
@@ -959,6 +987,7 @@ button, input, select, textarea {
 
 .b3-menu__item {
     padding: 5px 10px;
+    margin: 15px auto;
     border-radius: 15px;
     user-select: none;
     display: flex;
@@ -1122,10 +1151,10 @@ img.b3-menu__icon {
  margin: auto 15px auto 0px !important;
 }
 
-/*账号管理界面头衔|手机端。*/
+/*账号管理界面头衔|手机端。＋数据表格单选、多选。*/
 .b3-chip {
  background-color: #F3F3F3;
- color: var(--b3-theme-on-background);
+color: #717171!important;
 }
 
 /*点击访问授权码动画＋背景。*/
@@ -1189,6 +1218,8 @@ ul.b3-list.b3-list--background.fn__flex-column.fn__flex-1 {
     transform: none;
     opacity: 1;
     max-height: 75vh;
+    max-width: 90% !important;
+    bottom: 5%;
 }
 
 /*设置内面板。*/
@@ -1264,13 +1295,21 @@ ul.b3-list.b3-list--background.fn__flex-column.fn__flex-1 {
  /*height: 225px;*/
  max-height: 260px;
  border-radius: 0px;
- margin: 1.5px 0px 5px 0px;
+ margin: 0px 0px 0px 0px;
 }
 
 /*头题图无图时。*/
 .protyle-background {
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
+}
+
+/*头题图自定义表情。*/
+.protyle-background__icon img, .protyle-background__icon svg {
+    height: 70px;
+    width: 70px;
+    float: left;
+    border-radius: 50%;
 }
 
 /*头题图+正文滚动。*/
@@ -1303,7 +1342,7 @@ ul.b3-list.b3-list--background.fn__flex-column.fn__flex-1 {
 }
 
 .protyle-background__img .protyle-icons {
- padding-bottom: 5px;
+ padding-bottom: 15px;
  
  /*top: 0px;*/
  /*margin-left: -44px;*/
@@ -1514,6 +1553,7 @@ body {
 .b3-text-field {
  margin: 4px 0px 4px 0px;
  line-height: 32px;
+ min-height: 32px;
  border-radius: 15px !important;
  box-shadow:inset 7px 0 25px  rgba(16, 16, 25, 0.07) !important;
  background-color: #F3F3F3;
